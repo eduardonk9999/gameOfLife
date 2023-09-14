@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="wrapper">
+        <h1>Jogo da Vida</h1>
+    </header >
+    <section class="wrapper">
+        <h2>História do Jogo da Vida:</h2>
+        <p>O Jogo da Vida foi concebido por John Conway em 1970 como um modelo 
+            matemático de "vida artificial".
+            O jogo ocorre em uma grade bidimensional infinita, 
+            onde cada célula pode estar viva ou morta.</p>
+        <img src="imgs/ConwayKochen.jpg" alt="ConwayKochen">    
+                
+    </section>
+    <section class="wrapper">
+        <h2>A lógica usada</h2>
+        <p> A evolução das células ocorre em etapas discretas de acordo com regras simples:</p>
+        <ul>
+            <li>Qualquer célula viva com menos de 2 vizinhos vivos morre por solidão.</li>
+            <li>Qualquer célula viva com mais de 3 vizinhos vivos morre de superpopulação.</li>
+            <li>Qualquer célula viva com 2 ou 3 vizinhos vivos permanece viva na próxima geração.</li>
+            <li>Qualquer célula morta com exatamente 3 vizinhos vivos se torna uma célula viva na próxima geração.</li>
+        </ul>
+    </section>
+
+    <section class="wrapper game">
+        <div class="buttons">
+            <button id="startButton">Iniciar</button>
+            <button id="stopButton">Parar</button>
+            <button id="randomizeButton">Aleatório</button>
+        </div>
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+        
+    </section>
+
+
+    <script src="js/game.js"></script>
+</body>
+</html>
